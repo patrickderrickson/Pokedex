@@ -4,13 +4,23 @@ let pokemonList = [
     {name: 'Ivysaur', types: ['Grass', 'Poison'], height: 1, weight: '13kg'},
     {name: 'Venusaur', types: ['Grass', 'Poison'], height: 2, weight: '100kg'}
 ];
+    pokemonList.forEach(function(pokemon) {
+        if (pokemon.height >= 2) {
+            document.write( '<p>' + pokemon.name + ' ' + '(Height: ' + pokemon.height +  ')' + ' - Wow that\'s big!' + '</p>')  
+        }
+        else document.write( '<p>' + pokemon.name + ' ' + '(Height: ' + + pokemon.height +  ')' + '</p>')
+});
 
-for (let i = 0; i < pokemonList.length; i++) {
-    let pokemonName = pokemonList[i].name;
-    let pokemonHeight = pokemonList[i].height;
-
-    if (pokemonList[i].height >= 2) {
-        document.write( '<p>' + pokemonName + ' ' + '(Height: ' + pokemonHeight +  ')' + ' - Wow that\'s big!' + '</p>')  
+function divide (dividend, divisor) {
+    if(divisor === 0) {
+        return "You're trying to divide by 0"
+    }   else{
+        let result = dividend / divisor;
+        return result;
     }
-    else document.write( '<p>' + pokemonName + ' ' + '(Height: ' + + pokemonHeight +  ')' + '</p>')
 }
+
+console.log(divide(4, 2));
+console.log(divide(7, 0));
+console.log(divide(1, 4));
+console.log(divide(12, -3));
