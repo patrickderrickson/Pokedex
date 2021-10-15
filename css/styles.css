@@ -1,5 +1,5 @@
 .button-class {
-    background-color: pink; /* red */
+    background-color: #e44d4d; /* red */
     border: none;
     border-radius: 10px;
     color: grey;
@@ -81,6 +81,5 @@ body {
 }
 
 #modal-container.is-visible {
-  /* CSS for modal container - add your own desired CSS styles here */
   display: block;
 }
