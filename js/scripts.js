@@ -32,7 +32,7 @@
         //makes the button return the pokemon name in the console.
         function showDetails(pokemon) {
           loadDetails(pokemon).then(function() {
-              showModal(pokemon.name, pokemon.height, pokemon.imageUrl); 
+              showModal(pokemon.name, pokemon.height, pokemon.types, pokemon.imageUrl); 
         })
       }
 
@@ -69,7 +69,7 @@
           //Modal Function
         let modalContainer = document.querySelector('#modal-container');
 
-        function showModal(name, height, img) {
+        function showModal(name, height, types, img) {
           //clear all prexisting modal content
           modalContainer.innerHTML = '';
 
@@ -88,7 +88,11 @@
 
           //create pokemon height element
           let pokemonHeight = document.createElement('p');
-          pokemonHeight.innerText = 'Height:', height;
+          pokemonHeight.innerText = 'height: ' + height;
+
+          //create pokemon weight element
+          let pokemonTypes = document.createElement('p');
+          pokemonTypes.innerText = types;
 
           //create pokemon image
           let pokemonImg = document.createElement('img');
@@ -97,6 +101,7 @@
           modal.appendChild(closeButton);
           modal.appendChild(pokemonName);
           modal.appendChild(pokemonHeight);
+          modal.appendChild(pokemonTypes);
           modal.appendChild(pokemonImg);
           modalContainer.appendChild(modal);
 
