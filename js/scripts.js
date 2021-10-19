@@ -89,10 +89,11 @@
           //create pokemon height element
           let pokemonHeight = document.createElement('p');
           pokemonHeight.innerText = 'height: ' + height;
-
+          
           //create pokemon weight element
           let pokemonTypes = document.createElement('p');
-          pokemonTypes.innerText = types;
+          let secondType = types.length>1? ', ' + types[1].type.name : '';
+          pokemonTypes.innerText = 'types: ' + types[0].type.name + secondType;
 
           //create pokemon image
           let pokemonImg = document.createElement('img');
@@ -106,6 +107,7 @@
           modalContainer.appendChild(modal);
 
           modalContainer.classList.add('is-visible');
+          
         }
 
         //create the hide modal function
