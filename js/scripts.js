@@ -17,9 +17,10 @@
         function addListItem(pokemon) {
             let pokemonList = document.querySelector(".pokemon-list");
             let listpokemon = document.createElement("li");
+            listpokemon.classList.add('group-list-item', 'col-md-6', 'col-xl-2', 'col-lg-4')
             let button = document.createElement("button");
             button.innerText = pokemon.name;
-            button.classList.add("button-class");
+            button.classList.add('btn', 'btn-block', 'btn-info');
             listpokemon.appendChild(button);
             pokemonList.appendChild(listpokemon);
 
