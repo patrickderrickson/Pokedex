@@ -26,7 +26,23 @@
           </nav>
         <h1 class="text-center">Patrick's Pokedex</h1>
         <ul class="pokemon-list unstyled-list row justify-content-center"></ul>
-        <div id='modal-container'></div> 
+        <div class="modal fade" id="pokemonModalContainer" tabindex="-1" role="dialog" aria-labelledby="pokemonModalContainerLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header justify-content-center">
+                <h5 class="modal-title" id="modal-title"> </h5>
+              </div>
+              <div class="modal-body">
+              </div>
+              <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-close btn-warning border border-secondary" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true"> close</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
             
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
