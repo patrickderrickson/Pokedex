@@ -35,7 +35,7 @@
         //makes the button return the pokemon name in the console.
         function showDetails(pokemon) {
           loadDetails(pokemon).then(function() {
-              showModal(pokemon.name, pokemon.height, pokemon.types, pokemon.imageUrl); 
+              showModal(pokemon); 
         })
       }
 
