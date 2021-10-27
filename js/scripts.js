@@ -133,6 +133,21 @@
             hideModal();
           }
         });
+
+        let pokemonSearchBar = document.querySelector('#filter');
+
+            pokemonSearchBar.addEventListener('input', function() {
+              let pokeListItem = document.querySelectorAll('li');
+              let filter = pokemonSearchBar.value.toUpperCase();
+
+              pokeListItem.forEach(function(pokemon){
+                if (pokemon.innerText.toUpperCase().indexOf(filter) === 0) {
+                  pokemon.style.display = 'block';
+                } else {
+                  pokemon.style.display = 'none';
+                }
+              });
+            });
       
         
         return { 
